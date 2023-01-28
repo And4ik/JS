@@ -1,155 +1,155 @@
 <script>
-    function number(num,num2){
+    function number(num, num2) {
         return num + num2;
     }
     //console.log(number(1,3));
-   
+
     //Return Negative
     function makeNegative(num) {
-        if(num == 0){
+        if (num == 0) {
             return num;
         }
         return Math.abs(num) * -1;
-        
-}
+
+    }
     //console.log(makeNegative(4));
 </script>
 <script>
-function makeNegative(num) {
-  return -Math.abs(num);
-}
+    function makeNegative(num) {
+        return -Math.abs(num);
+    }
 //console.log(makeNegative(0));
 </script>
 
 
 <script>
     //Returning Strings
-    function greet(name){
+    function greet(name) {
         return "Hello, " + name + " how are you doing today?"
-}
+    }
 //console.log(greet("Andrei"));
 </script>
 
 <script>
     //String repeat
-    function repeatStr (n, s) {
+    function repeatStr(n, s) {
         let result = "";
 
 
-        for (var i = 0; i < n; i++){
-            console.log(i,result)
+        for (var i = 0; i < n; i++) {
+            console.log(i, result)
             result = result + s;
-           
-	    }
+
+        }
 
 
         return result;
-  }
+    }
   //console.log(repeatStr(7,"Dima"));
 </script>
 <script>
     //Even or Odd
     function evenOrOdd(number) {
-         if(number % 2 == 0 ){
-             return "Even";
-         }
+        if (number % 2 == 0) {
+            return "Even";
+        }
         return "Odd";
     }
     //console.log(evenOrOdd(5));
 </script>
 
 <script>
-  //Calculate BMI
+    //Calculate BMI
 
     function bmi(weight, height) {
-        let abc = weight / height**2;
-        
-        if(abc <= 18.5){
+        let abc = weight / height ** 2;
+
+        if (abc <= 18.5) {
             return "Underweight";
         }
-        if(abc <= 25.0){
+        if (abc <= 25.0) {
             return "Normal";
         }
-        if(abc <= 30.0){
+        if (abc <= 30.0) {
             return "Overweight";
         }
-  
-      return "Obese";
-     }
-  
+
+        return "Obese";
+    }
+
 </script>
 
 
 <script>
     //Area or Perimeter
-          function areaOrPerimeter(l , w) {
-            if(l===w){
-                return l*w;
-            }
-            return l+w+l+w;
-         
+    function areaOrPerimeter(l, w) {
+        if (l === w) {
+            return l * w;
         }
-        
+        return l + w + l + w;
 
-  </script>
+    }
+
+
+</script>
 
 <script>
     //Price of Mangoes
 
-function mango(quantity, price){
-   
-return (quantity- Math.trunc(quantity/3)) * price;
-}
-mango(10,2);
+    function mango(quantity, price) {
+
+        return (quantity - Math.trunc(quantity / 3)) * price;
+    }
+    mango(10, 2);
 </script>
 
 <script>
     //Quarter of the year
 
-const quarterOf = (month) => {
+    const quarterOf = (month) => {
 
-    if(month >=1 && month <=3){
-    return 1;
+        if (month >= 1 && month <= 3) {
+            return 1;
+        }
+        if (month >= 4 && month <= 6) {
+            return 2;
+        }
+        if (month >= 7 && month <= 9) {
+            return 3;
+        }
+        return 4;
     }
-    if(month >=4 && month <=6){
-    return 2;
-    }
-    if(month >=7 && month <=9){
-    return 3; 
-    }
-    return 4;
-}
 //console.log(quarterOf(8));
 </script>
 
 <script>
     //Convert a Boolean to a String
 
-    function booleanToString(b){
-    return b.toString();
-}
+    function booleanToString(b) {
+        return b.toString();
+    }
 //console.log(booleanToString(true));
 </script>
 
 <script>
     //Keep Hydrated!
     function litres(time) {
-  return Math.floor(time*0.5);
-}
-console.log(litres(5));
+        return Math.floor(time * 0.5);
+    }
+//console.log(litres(5));
 </script>
 
 </script>
 
 <script>
     //String ends with?
-    function solution(str, ending){
+    function solution(str, ending) {
         //let a = str.lastIndexOf(ending);
-  //return str.length - a == ending.length;
-  let b = str.substring(str.length - ending.length)
-  return b==ending;
-  
-}
+        //return str.length - a == ending.length;
+        let b = str.substring(str.length - ending.length)
+        return b == ending;
+
+    }
 //console.log(solution("Andrei","ei"));
 </script>
 
@@ -157,65 +157,82 @@ console.log(litres(5));
 <script>
     //The 'if' function
     function and(bool, func1, func2) {
-        if(bool == true) return func1();
+        if (bool == true) return func1();
         return func2();
     }
-    and(false,()=>{console.log('Andrei true')},()=>{console.log('Dima false')});
+    //and(false,()=>{console.log('Andrei true')},()=>{console.log('Dima false')});
 </script>
 
 <script>
     //DNA to RNA Conversionon
     function DNAtoRNA(dna) {
-        return dna.replaceAll("T","U");// меняет все буквы T на U в заданном значениее переменной(ищет все Т и меняет на все U)
+        return dna.replaceAll("T", "U");// меняет все буквы T на U в заданном значениее переменной(ищет все Т и меняет на все U)
 
     }
-   console.log(DNAtoRNA("GCAT"));
-    
+   //console.log(DNAtoRNA("GCAT"));
+
 </script>
 <script>
     //Unfinished Loop - Bug Fixing #1
-function createArray(number){
-    var newArray = [];
-    for(var counter = 1; counter <= number; counter ++){
-      newArray.push(counter);
+    function createArray(number) {
+        var newArray = [];
+        for (var counter = 1; counter <= number; counter++) {
+            newArray.push(counter);
+        }
+        return newArray;
     }
-    return newArray;
-  }
 </script>
 
 <script>
     //Simple multiplication
     function simpleMultiplication(number) {
-        if(number % 2 == 0 ){
-             return number * 8;
-         }
+        if (number % 2 == 0) {
+            return number * 8;
+        }
         return number * 9;
-  }
-  console.log(simpleMultiplication(4));
+    }
+  //console.log(simpleMultiplication(4));
 </script>
 
 <script>
     //Remove First and Last Character
-    function removeChar(str){
+    function removeChar(str) {
         let b = str.slice(1, -1);// удаляет первую и последнюю букву заданного параметра
         return b;
-  }
-  console.log(removeChar("QandreiQ"));
+    }
+  //console.log(removeChar("QandreiQ"));
 </script>
 
 <script>
     //Remove First and Last Character
-    function removeChar(str){
+    function removeChar(str) {
         let b = str.slice(1, -1);// удаляет первую и последнюю букву заданного параметра
         return b;
-  }
-  console.log(removeChar("QandreiQ"));
+    }
+  //console.log(removeChar("QandreiQ"));
 </script>
 
 <script>
     //Third Angle of a Triangle
-    function otherAngle(a, b) {
-  return 180 - (a+b);
-}
-console.log(otherAngle(20, 120));
+    function otherAngle(a, b) {// cчитает третий угол треугольника
+        return 180 - (a + b);
+    }
+//console.log(otherAngle(20, 120));
+</script>
+
+<script>
+    //Reversed Words
+    function reverseWords(str) { // пишет значение задом-наперед
+        return str.split(" ").reverse().join(" ");// split-разбивает строку на массив, reverse-переворачивает задом-наперед,
+        // join преобразует массив в строку
+    }
+//console.log(reverseWords("Привет всем, меня завут Андрей"));
+</script>
+
+<script>
+    //Function 1 - hello world
+    function greet() {
+        return "hello world!"  
+    }
+console.log(greet());
 </script>
